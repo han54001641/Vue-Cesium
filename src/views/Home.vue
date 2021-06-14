@@ -1,43 +1,29 @@
 <template>
-  <div id="cesium_container"></div>
+  <div id="container">
+    <div class="homebj">
+      <div class="text">My Cesium实例持续更新中...</div>
+    </div>
+  </div>
 </template>
 
 <script>
-export default {
-  mounted() {
-    this.initViewer();
-  },
-  methods: {
-    initViewer() {
-      var viewer = new Cesium.Viewer("cesium_container", {});
-    },
-  },
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
-html {
-  margin: 0;
-  padding: 0;
+.homebj {
   width: 100%;
   height: 100%;
-}
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
-#app {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
-#cesium_container {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
+  background: url("../assets/imgs/welcomebg.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+  .text {
+    color: white;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 </style>
